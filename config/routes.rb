@@ -8,6 +8,8 @@ WeeklyEats::Application.routes.draw do
   resources :recipes
 
   resources :users
+  
+  resources :dashboard
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -20,7 +22,6 @@ WeeklyEats::Application.routes.draw do
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
   match 'dashboard/recipes' => 'dashboard#recipes', :as => :dashboard_recipes
-
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 

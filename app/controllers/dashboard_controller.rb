@@ -1,4 +1,8 @@
 class DashboardController < ApplicationController
+  def index
+  end
+  def show
+  end
   def confirm_meals
     # todo: implement logic to save the meals the user selected 
   end
@@ -12,6 +16,10 @@ class DashboardController < ApplicationController
     end
   end
   
+  def test_page
+  end
+  
+    
   def change_recipe
     # todo: returns a new random recipe template to replace one they rejected.
     # Pick one that is not already shown on the page
