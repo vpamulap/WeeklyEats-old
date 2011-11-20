@@ -89,7 +89,9 @@ class DashboardController < ApplicationController
   
   def buy
   end
+  
+  def change_meal
+    @recipe = Recipe.first
+    render @recipe, :layout => false
+  end
 end
-
-
-
