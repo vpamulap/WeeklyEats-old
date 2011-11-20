@@ -5,11 +5,11 @@ WeeklyEats::Application.routes.draw do
   match '/setup',       :to => 'dashboard#setup'
   match '/shopping',    :to => 'dashboard#shopping'
   
-  #match '/recipes',     :to => 'dashboard#recipe'
+  #match '/change_recipes',     :to => 'dashboard#recipe'
   #get "home/index"
 
   #resources :meals
-  #resources :recipes
+  resources :recipes
   #resources :users
   #resources :ingredients
 
