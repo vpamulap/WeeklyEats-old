@@ -2,9 +2,10 @@ class DashboardController < ApplicationController
   def index
   end
   
-  def main
+  def meals
     @recipes = Recipe.all
   end
+
   def stats
   end
 
