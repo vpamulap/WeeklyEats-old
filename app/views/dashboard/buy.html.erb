@@ -61,35 +61,12 @@
 						
 						<br><br>
 				  
-						<h3>Time to fill the Pantry</h3><br>
+						<h3>Buy your groceries now!</h3><br>
 						
-						<%= link_to(image_tag("shopping/email.png", :alt => "Email") ) %>
-                        &nbsp;
-                        <%= link_to(image_tag("shopping/buyNow.png", :alt => "Email"), :action => "buy" ) %>
-                        &nbsp;
-                        <%= link_to(image_tag("shopping/print.png", :alt => "Email") ) %>
-                        <br><br>
+                        <%= link_to(image_tag("shopping/buyNowScreen.png", :alt => "Buy") ) %>
+                        
+                        <br><br><br>
 						
-						<!-- LIST OF SHOPPING CART ITEMS -->
-						
-						<form>
-						<table font-size="18px;">
-						    <tr>
-						    <!--
-						        <th>test</th>
-						        <th><h4>Quantity</h4></th>
-						        <th><h4>Ingredient</h4></th> -->
-						    </tr>
-						
-						    <% @groceries.each do |grocery| %>
-						        <tr>
-						            <td><input type='checkbox' name="vehicle" value="bike" /></td>
-						            <td><%= grocery[:quantity] %></td>
-						            <td><%= grocery[:name] %></td>
-						        </tr>
-						    <%  end %>
-                        </table>
-                        </form>						
 					</div>					
 				</div>
 			

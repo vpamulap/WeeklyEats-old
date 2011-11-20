@@ -72,37 +72,46 @@
 						
 						<br><br>
 				
-						<h3>My what wonderful taste you have!</h3><br>
+						<h3><%= @recipe.name %></h3><br>
 						
 						<!-- NEW LINE -->
 
 						<div class="row" align=center>
-							<div class="two columns">
-								<%= image_tag "foundation/images/foodPlaceholder.jpeg" %>
+							<div class="one columns">
 							</div>
 							
-							<div class="eight columns">
+							<div class="eight columns">							
+							    <%= image_tag "foundation/images/foodPlaceholder.jpeg" %>		
+								<br><br>
+								<p align="left"><%= @recipe.directions %></p>
+								<h4 align="left">Ingredients</h4>
+								<br>
 								
-									<h4 align="left"><%= @recipe.name %></h4>
-									<p align="left"><%= @recipe.directions %></p>
-							
-							<div class="row">
-							    <%= image_tag "foundation/images/makingThis.png" , :align => "middle" %>
-								<br>			
-								<%= image_tag "foundation/images/social.png",  :align => 'middle' %>
-								<!--
-								<div class="fb-like" data-href="INSERT_RECIPE_URL_HERE" data-send="true" data-width="450" data-show-faces="true"></div>
-								-->							
-								</div>
+								<ul align="left">
+								    <% @recipe.ingredients.each do |ingredient| %>
+								    <li type='circle'><%= ingredient.quantity %> <%= ingredient.name %></li>
+								    <% end %>
+								</ul>
+							    
+							    <div class="row">
+							        
+							        
+								    <br>			
+								    <%= image_tag "foundation/images/social.png",  :align => 'middle' %>
+								    <!--
+								    <div class="fb-like" data-href="INSERT_RECIPE_URL_HERE" data-send="true" data-width="450" data-show-faces="true"></div>
+								    -->							
+						        </div>
 
 			
-							<br><br><br>
-							
+							    <br><br><br>
 							</div>
 
-							<div class="two columns">
-								<%= image_tag "foundation/images/check.png", :width => 30, :height => 30 %>
-								<%= image_tag "foundation/images/cross.png", :width => 30, :height => 30 %>
+							<div class="four columns">
+							    <%= image_tag "foundation/images/makingThis.png" , :align => "middle" %>
+							    
+							    <%= image_tag "recipes/neil.jpg" %>
+							    <h5>Neil Cooked this Last Week</h5>
 							</div>
 						</div>
 						
@@ -114,7 +123,7 @@
 			
 		</div>
 
-
+<%= debug @recipe.ingredients %>
 	
 </body>
 </html>

@@ -5,6 +5,7 @@ WeeklyEats::Application.routes.draw do
   match '/setup',       :to => 'dashboard#setup', :as => 'setup_page'
   match '/shopping',    :to => 'dashboard#shopping', :as => 'shopping_path'
   match '/dashboard/change_meal' => 'dashboard#change_meal', :as=>'change_meal'
+  match '/buy',         :to => 'dashboard#buy'
   
   #match '/change_recipes',     :to => 'dashboard#recipe'
   #get "home/index"

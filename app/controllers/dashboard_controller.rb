@@ -1,5 +1,6 @@
 class DashboardController < ApplicationController
   def index
+    session[:rids] = nil
   end
   
   def main
@@ -84,6 +85,9 @@ class DashboardController < ApplicationController
     groceries.delete_if { |g| g[:quantity] == 0 } 
     
     groceries
+  end
+  
+  def buy
   end
 end
 
