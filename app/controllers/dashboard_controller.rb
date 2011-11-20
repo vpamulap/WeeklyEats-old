@@ -2,8 +2,8 @@ class DashboardController < ApplicationController
   def index
   end
   
-  def meals
-    @recipes = Recipe.all
+  def main
+    @nmeals = @params[:meal_number]  
   end
 
   def stats
