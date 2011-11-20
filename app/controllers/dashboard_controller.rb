@@ -38,6 +38,52 @@ class DashboardController < ApplicationController
   end
   
   def shopping
+    # Build shopping list from session vars
+    rids = session[:rids]
+    rc = session[:rc]
+    
+    # Build an array of recipes from rids
+    recipes = []
+    rids.each { |rid| recipes << Recipe.find(rid) }
+    
+    # Consolidate recipes and build a grocery list
+    @groceries = consolidate(recipes)
+    
+  end
+  
+   def consolidate(recipes)
+    # Find all unique names
+    names = []
+    recipes.each do |recipe|
+        recipe.ingredients.each do |ingredient|
+             names << ingredient.name
+        end
+    end
+    
+    names.uniq!
+    
+    # Find quantity and recipe_id's for each name
+    groceries = []
+    names.each do |name|
+        quantity = 0
+        rids = []
+        
+        recipes.each do |recipe|
+            recipe.ingredients.each do |ingredient|
+                if ingredient.name == name
+                    quantity += ingredient.quantity
+                    rids << ingredient.recipe_id
+                end
+            end
+        end
+        
+        groceries << { :quantity => quantity, :name => name, :recipes => rids.join(',') }
+    end
+    
+    # Remove items with 0 quantity
+    groceries.delete_if { |g| g[:quantity] == 0 } 
+    
+    groceries
   end
 end
 
