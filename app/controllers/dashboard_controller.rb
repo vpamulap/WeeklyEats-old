@@ -10,4 +10,7 @@ class DashboardController < ApplicationController
 
   def recipe
   end
+  
+  def setup
+  end
 end

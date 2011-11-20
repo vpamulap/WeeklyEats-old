@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+	
+	<title>Weekly Eats</title>
+  
+	<!-- Included CSS Files -->
+	<%= stylesheet_link_tag 'foundation.css', :media => 'screen' %>
+	<%= stylesheet_link_tag 'app.css', :media => 'screen' %>
+	
+
+	<!--[if lt IE 9]>
+		<%= stylesheet_link_tag 'ie.css', :media => 'screen' %>
+	<![endif]-->
+
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<%= javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js' %>
+	<![endif]-->
+
+</head>
+<body>
+
+		<!-- container -->
+		<div class="container">
+
+			<!-- HEADER CODE -->
+			<div class="row">
+				<div class="four columns">
+					<br>
+					<%= image_tag "foundation/custom_images/logo.png", :alt => "Weekly Eats"%>
+					<br><br><br>
+				</div>
+				<div class="eight columns">
+					
+				</div>
+			</div>
+
+			
+			<!-- HOW MANY MEALS DO YOU WANT? -->		
+
+			<div class="row">
+				<div class="eight columns centered">
+					<div class="panel" align=center>
+						<h2>Weekly Eats is your personal cooking assistant.</h2>  
+						
+					<br>
+							<h5><strong>Heading to the grocery store?</strong> <br> Let us know how many meals you think you would like to cook this week, and leave the rest to us! </h5><br><br>
+						
+						<h4>How many meals do you want to plan?</h4> <br><br>
+						
+						<input type="radio" name="mealNumber" value="1"> 1 
+						<input type="radio" name="mealNumber" value="2"> 2 
+						<input type="radio" name="mealNumber" value="3"> 3 
+						<input type="radio" name="mealNumber" value="4"> 4 											
+						<input type="radio" name="mealNumber" value="5"> 5 
+						<input type="radio" name="mealNumber" value="6"> 6 
+						<input type="radio" name="mealNumber" value="7"> 7
+						<br><br><br>
+						
+						<a href="dashboard.html" class="nice large radius blue button">Get My Meals!</a>
+						<br><br><br>
+						
+						 						
+					</div>					
+				</div>
+				
+			</div>>
+			
+		</div>>
+
+
+	<!-- Included JS Files -->
+	<script src="javascripts/foundation.js"></script>
+	<script src="javascripts/app.js"></script>
+	
+</body>
+</html>

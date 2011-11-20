@@ -1,7 +1,8 @@
 WeeklyEats::Application.routes.draw do
   match '/main',    :to => 'dashboard#main'
   match '/stats',   :to => 'dashboard#stats'
-  match '/recipe',  :to => 'dashboard#recipe'
+  match '/recipes',  :to => 'dashboard#recipe'
+  match '/setup',   :to => 'dashboard#setup'
   
   #get "home/index"
 
