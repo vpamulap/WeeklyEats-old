@@ -2,7 +2,7 @@ class DashboardController < ApplicationController
   def index
   end
   
-  def main
+  def main  
   end
 
   def stats
