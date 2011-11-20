@@ -63,8 +63,28 @@
 						
 						
             <%=  render @recipes %>
+            
+            <div id="recipe_X" class="row white" align=center style="display: none;">
+              <div class="two columns">
+                <%= image_tag "recipes/recipeX.jpg" %>
+              </div>
+	            <div class="eight columns">
+	              <a href="recipe.html">
+	                <h4 align="left">
+	                  Sloppy Joes
+                  </h4>
+                </a>
+	              <p align="left">
+	                In a medium skillet over medium heat, brown the ground beef, onion, and green pepper; drain off liquids.
+        Stir in the garlic powder, mustard, ketchup, and brown sugar; mix thoroughly. Reduce heat, and simmer for 30 minutes. Season with salt and pepper.
+	              </p>
+	            </div>
+              <%= render :partial=>"recipes/accept_reject_buttons" %>
+            </div>
 					</div>					
 				</div>
 		</div>
+		
+		
 </body>
 </html>
