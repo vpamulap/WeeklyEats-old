@@ -1,7 +1,7 @@
 $(document).ready(function(){
   //alert('javacsript file included!');
   
- $('.change_meal_link').bind('click', function(){
+ $('.change_meal_link').live('click', function(){
     var $recipe_X = $('#recipe_X');
     var $this_recipe = $(this).parent().parent();
 
