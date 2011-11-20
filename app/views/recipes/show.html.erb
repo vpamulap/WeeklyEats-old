@@ -1,20 +1,120 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
 
-<p>
-  <b>Name:</b>
-  <%= @recipe.name %>
-</p>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+	
+	<title>Weekly Eats</title>
+  
+	<!-- Included CSS Files -->
+	<%= stylesheet_link_tag 'foundation', :media => 'screen' %>
+	<%= stylesheet_link_tag 'app.css', :media => 'screen' %>
+	
 
-<p>
-  <b>Directions:</b>
-  <%= @recipe.directions %>
-</p>
+	<!--[if lt IE 9]>
+		<%= stylesheet_link_tag 'ie.css', :media => 'screen' %>
+	<![endif]-->
 
-<p>
-  <b>Picture path:</b>
-  <%= @recipe.picture_path %>
-</p>
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<%= javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js' %>
+	<![endif]-->
+
+</head>
+<body>
+	
+	<!-- Included JS Files -->
+	<%= javascript_include_tag 'foundation.js' %>
+	<%= javascript_include_tag 'app.js' %>>
+
+	<!-- Facebook Share Script -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) {return;}
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=270750379638433";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
+
+		<!-- container -->
+		<div class="container">
+
+			<!-- HEADER CODE -->
+			<div class="row">
+				<div class="four columns">
+					<br>
+					<%= image_tag "foundation/custom_images/logo.png", :alt => "Weekly Eats"%>
+					<br><br><br>
+				</div>
+			</div>
+	
+
+			<div class="row">
+				<div class="ten columns centered">
+					<div class="panel" align=center>
+
+						<!-- NAVIGATION PANEL -->
+						<%= link_to(image_tag("foundation/custom_images/RecipeActiveButton.png", :alt => "Recipes"), :controller=>"dashboard", :action => "main") %>
+						
+						<%= link_to(image_tag("foundation/custom_images/ShoppingInactiveButton.png", :alt => "Shopping"), :controller=>"dashboard", :action => "shopping") %>
+						
+						<%= link_to(image_tag("foundation/custom_images/StatsInactiveButton.png", :alt => "Stats"), :controller=>"dashboard", :action => "stats") %>
+						
+						<br><br>
+				
+						<h3>My what wonderful taste you have!</h3><br>
+						
+						<!-- NEW LINE -->
+
+						<div class="row" align=center>
+							<div class="two columns">
+								<%= image_tag "foundation/images/foodPlaceholder.jpeg" %>
+							</div>
+							
+							<div class="eight columns">
+								
+									<h4 align="left"><%= @recipe.name %></h4>
+									<p align="left"><%= @recipe.directions %></p>
+							
+							<div class="row">
+							    <%= image_tag "foundation/images/makingThis.png" , :align => "middle" %>
+								<br>			
+								<%= image_tag "foundation/images/social.png",  :align => 'middle' %>
+								<!--
+								<div class="fb-like" data-href="INSERT_RECIPE_URL_HERE" data-send="true" data-width="450" data-show-faces="true"></div>
+								-->							
+								</div>
+
+			
+							<br><br><br>
+							
+							</div>
+
+							<div class="two columns">
+								<%= image_tag "foundation/images/check.png", :width => 30, :height => 30 %>
+								<%= image_tag "foundation/images/cross.png", :width => 30, :height => 30 %>
+							</div>
+						</div>
+						
+					
+						
+						
+					</div>					
+				</div>
+			
+		</div>
 
 
-<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
-<%= link_to 'Back', recipes_path %>
+	
+</body>
+</html>

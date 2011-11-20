@@ -3,12 +3,12 @@
     <%= image_tag "recipes/"+recipe.picture_path %>
   </div>
 	<div class="eight columns">
-	  <a href="recipe.html">
+	  
 	    <h4 align="left">
-	      <%= recipe.name %>
+		<%= link_to recipe.name, "recipes/#{recipe.id}"%>
       </h4>
     </a>
-	  <p align="left"><%= recipe.directions%></p>
+	  <p align="left"><%=recipe.directions%></p>
 	</div>
   <%= render :partial=>"recipes/accept_reject_buttons" %>
 </div>
