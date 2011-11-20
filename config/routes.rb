@@ -5,13 +5,10 @@ WeeklyEats::Application.routes.draw do
   
   #get "home/index"
 
-  resources :meals
-
-  resources :recipes
-
-  resources :users
-  
-  resources :ingredients
+  #resources :meals
+  #resources :recipes
+  #resources :users
+  #resources :ingredients
 
 
   # The priority is based upon order of creation:

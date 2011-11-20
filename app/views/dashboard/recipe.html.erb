@@ -14,26 +14,26 @@
 	<title>Weekly Eats</title>
   
 	<!-- Included CSS Files -->
-	<link rel="stylesheet" href="stylesheets/foundation.css">
-	<link rel="stylesheet" href="stylesheets/app.css">
+	<%= stylesheet_link_tag 'foundation.css', :media => 'screen' %>
+	<%= stylesheet_link_tag 'app.css', :media => 'screen' %>
 	
 
 	<!--[if lt IE 9]>
-		<link rel="stylesheet" href="stylesheets/ie.css">
+		<%= stylesheet_link_tag 'ie.css', :media => 'screen' %>
 	<![endif]-->
 
 	
 	<!-- IE Fix for HTML5 Tags -->
 	<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<%= javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js' %>
 	<![endif]-->
 
 </head>
 <body>
 	
 	<!-- Included JS Files -->
-	<script src="javascripts/foundation.js"></script>
-	<script src="javascripts/app.js"></script>
+	<%= javascript_include_tag 'foundation.js' %>
+	<%= javascript_include_tag 'app.js' %>>
 
 	<!-- Facebook Share Script -->
 	<div id="fb-root"></div>
@@ -53,7 +53,7 @@
 			<div class="row">
 				<div class="four columns">
 					<br>
-					<img src='stylesheets/custom_images/logo.png' alt="Weekly Eats">
+					<%= image_tag "foundation/custom_images/logo.png", :alt => "Weekly Eats"%>
 					<br><br><br>
 				</div>
 			</div>
@@ -65,13 +65,13 @@
 
 						<!-- NAVIGATION PANEL -->
 						<a href="dashboard.html">
-							<img src="stylesheets/custom_images/RecipeActiveButton.png" alt="Recipes">
+							<%= image_tag "foundation/custom_images/RecipeActiveButton.png", :alt => "Main" %>
 						 </a>
 						<a href="shoppingList.html">
-							<img src="stylesheets/custom_images/ShoppingInactiveButton.png" alt="Recipes">
+							<%= image_tag "foundation/custom_images/ShoppingInactiveButton.png", :alt => "Recipes" %>
 						 </a>
 						 <a href="healthStats.html">
-							<img src="stylesheets/custom_images/StatsInactiveButton.png" alt="Recipes">
+						    <%= image_tag "foundation/custom_images/StatsInactiveButton.png", :alt => "Stats" %>
 						 </a>
 						
 						<br><br>
@@ -82,7 +82,7 @@
 
 						<div class="row" align=center>
 							<div class="two columns">
-								<img src="images/foodPlaceholder.jpeg">
+								<%= image_tag "foundation/images/foodPlaceholder.jpeg" %>
 							</div>
 							
 							<div class="eight columns">
@@ -97,10 +97,9 @@
 										 </p>
 							
 							<div class="row">
-								<img src="images/makingThis.png" align="middle">
+							    <%= image_tag "foundation/images/makingThis.jpeg" , :align => "middle" %>
 								<br>			
-								<img src="images/social.png" align="middle">
-								
+								<%= image_tag "foundation/images/social.png",  :align => 'middle' %>
 								<!--
 								<div class="fb-like" data-href="INSERT_RECIPE_URL_HERE" data-send="true" data-width="450" data-show-faces="true"></div>
 								-->							

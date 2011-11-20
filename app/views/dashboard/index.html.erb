@@ -14,17 +14,18 @@
 	<title>Weekly Eats</title>
   
 	<!-- Included CSS Files -->
-	<link rel="stylesheet" href="stylesheets/foundation.css">
-	<link rel="stylesheet" href="stylesheets/app.css">
+	<%= stylesheet_link_tag 'foundation.css', :media => 'screen' %>
+	<%= stylesheet_link_tag 'app.css', :media => 'screen' %>
+	
 
 	<!--[if lt IE 9]>
-		<link rel="stylesheet" href="stylesheets/ie.css">
+		<%= stylesheet_link_tag 'ie.css', :media => 'screen' %>
 	<![endif]-->
 
 	
 	<!-- IE Fix for HTML5 Tags -->
 	<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<%= javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js' %>
 	<![endif]-->
 
 </head>
@@ -36,9 +37,10 @@
 			<div class="row">
 				<div class="eight columns centered">
 					<br><br><br>
-					<img src='stylesheets/custom_images/logo.png' alt="Weekly Eats">
+					<%= image_tag "foundation/custom_images/logo.png", :alt => "Weekly Eats" %>
 					<br><br><br>
-					<img src='stylesheets/custom_images/tagline.png' alt="Tagline" >
+					<%= image_tag "foundation/custom_images/tagline.png", :alt => "Tagline" %>
+					
 					<br><br><br><br><br>
 					
 
@@ -61,11 +63,12 @@
 		         }(document));
 		      </script>			
 		
-			  <div class="fb-login-button" data-perms="email,user_checkins">
+			  <!-- <div class="fb-login-button" data-perms="email,user_checkins">
 			        Login with Facebook
 			      </div>		
+			  -->
 				<a href=setup.html>
-					<img src='stylesheets/custom_images/facebookConnect.png' alt="Facebook Connect" align="right" >
+					<%= image_tag "foundation/custom_images/facebookConnect.png", :alt => "Facebook Connect", :align => "right" %>
 				</a>
 					
 					<br><br><br>
