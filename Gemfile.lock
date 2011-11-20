@@ -115,7 +115,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.1.1)
   execjs
-  jquery-rails
+  jquery-rails (>= 1.0.12)
   pg
   rails (= 3.1.2)
   sass-rails (~> 3.1.5.rc.2)

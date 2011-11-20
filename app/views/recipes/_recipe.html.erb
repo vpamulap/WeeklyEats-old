@@ -1,3 +1,14 @@
-<li>
- This is where we put some shit for recipe named <%= recipe.name %>
-</li>
+<div class="row white" align=center>
+  <div class="two columns">
+    <%= image_tag recipe.picture_path %>
+  </div>
+	<div class="eight columns">
+	  <a href="recipe.html">
+	    <h4 align="left">
+	      <%= recipe.name %>
+      </h4>
+    </a>
+	  <p align="left"><%= recipe.directions%></p>
+	</div>
+  <%= render :partial=>'recipes/accept_reject_buttons' %>
+</div>
