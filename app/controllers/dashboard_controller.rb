@@ -1,4 +1,10 @@
 class DashboardController < ApplicationController
+  def index
+  end
+  
+  def main
+  end
+
   def confirm_meals
     # todo: implement logic to save the meals the user selected 
   end

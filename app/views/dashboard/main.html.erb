@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+	
+	<title>Weekly Eats</title>
+  
+	<!-- Included CSS Files -->
+	<%= stylesheet_link_tag 'foundation.css', :media => 'screen' %>
+	<%= stylesheet_link_tag 'app.css', :media => 'screen' %>	
+
+	<!--[if lt IE 9]>
+	    <%= stylesheet_link_tag 'ie.css', :media => 'screen' %>
+	<![endif]-->
+
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+	    <%= javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js' %>
+	<![endif]-->
+
+</head>
+<body>
+	
+	<!-- Included JS Files -->
+	<%= javascript_include_tag 'foundation.js' %></script>
+	<%= javascript_include_tag 'app.js' %>></script>
+
+		<!-- container -->
+		<div class="container">
+
+			<!-- HEADER CODE -->
+			<div class="row">
+				<div class="four columns">
+					<br>
+					<img src='stylesheets/custom_images/logo.png' alt="Weekly Eats">
+					<br><br><br>
+				</div>
+			</div>
+	
+
+			<div class="row">
+				<div class="ten columns centered">
+					<div class="panel" align=center>
+
+						<!-- NAVIGATION PANEL -->
+						<a href="dashboard.html">
+							<img src="stylesheets/custom_images/RecipeActiveButton.png" alt="Recipes">
+						 </a>
+						<a href="shoppingList.html">
+							<img src="stylesheets/custom_images/ShoppingInactiveButton.png" alt="Recipes">
+						 </a>
+						 <a href="healthStats.html">
+							<img src="stylesheets/custom_images/StatsInactiveButton.png" alt="Recipes">
+						 </a>
+						
+						<br><br>
+				
+						<h1>Awesomeness.</h1>  
+						<h3>Now check out our suggestions, and then go shopping!</h3><br>
+						
+						<!-- NEW LINE -->
+
+						<div class="row white" align=center>
+							<div class="two columns">
+								<img src="images/foodPlaceholder.jpeg">
+							</div>
+							
+							<div class="eight columns">
+								
+									<a href="recipe.html"><h4 align="left">Recipe Title</h4></a>
+									<p align="left">Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. </p>
+							</div>
+
+							<div class="two columns">
+								<img src="images/check.png" width="30px" height="30px">
+								<img src="images/cross.png" width="30px" height="30px">
+							</div>
+						</div>
+						
+						<!-- NEW LINE -->
+						
+						<div class="row white" align=center>
+							
+							<div class="two columns">
+								<img src="images/foodPlaceholder.jpeg">
+							</div>
+							
+							<div class="eight columns">
+								<a href="recipe.html"><h4 align="left">Recipe Title</h4></a>								<p align="left">Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. </p>
+							</div>
+
+							<div class="two columns">
+								<img src="images/check.png" width="30px" height="30px">
+								<img src="images/cross.png" width="30px" height="30px">
+							</div>
+						
+						</div>
+						
+						<!-- NEW LINE -->
+						
+						<div class="row white" align=center>
+							
+							<div class="two columns">
+								<img src="images/foodPlaceholder.jpeg">
+							</div>
+							
+							<div class="eight columns">
+								<a href="recipe.html"><h4 align="left">Recipe Title</h4></a>								<p align="left">Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. </p>
+							</div>
+
+							<div class="two columns">
+								<img src="images/check.png" width="30px" height="30px">
+								<img src="images/cross.png" width="30px" height="30px">
+							</div>
+						
+						</div>
+						
+						
+					</div>					
+				</div>
+			
+		</div>
+
+
+	
+</body>
+</html>

@@ -8,6 +8,8 @@ WeeklyEats::Application.routes.draw do
   resources :recipes
 
   resources :users
+  
+  resources :dashboard
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
