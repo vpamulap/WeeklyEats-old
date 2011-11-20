@@ -13,4 +13,7 @@ class DashboardController < ApplicationController
   
   def setup
   end
+  
+  def shopping
+  end
 end

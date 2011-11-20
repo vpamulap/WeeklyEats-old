@@ -30,7 +30,11 @@
 
 </head>
 <body>
-
+	
+	<!-- Included JS Files -->
+	<%= javascript_include_tag 'foundation.js' %>
+	<%= javascript_include_tag 'app.js' %>
+	
 		<!-- container -->
 		<div class="container">
 
@@ -41,48 +45,41 @@
 					<%= image_tag "foundation/custom_images/logo.png", :alt => "Weekly Eats"%>
 					<br><br><br>
 				</div>
-				<div class="eight columns">
-					
-				</div>
 			</div>
-
-			
-			<!-- HOW MANY MEALS DO YOU WANT? -->		
+	
 
 			<div class="row">
-				<div class="eight columns centered">
+				<div class="ten columns centered">
 					<div class="panel" align=center>
-						<h2>Weekly Eats is your personal cooking assistant.</h2>  
+
+						<!-- NAVIGATION PANEL -->
+						<%= link_to(image_tag("foundation/custom_images/RecipeInactiveButton.png", :alt => "Recipes"), :action => "recipe") %>
 						
-					<br>
-							<h5><strong>Heading to the grocery store?</strong> <br> Let us know how many meals you think you would like to cook this week, and leave the rest to us! </h5><br><br>
+						<%= link_to(image_tag("foundation/custom_images/ShoppingActiveButton.png", :alt => "Shopping"), :action => "shopping") %>
 						
-						<h4>How many meals do you want to plan?</h4> <br><br>
+						<%= link_to(image_tag("foundation/custom_images/StatsInactiveButton.png", :alt => "Stats"), :action => "stats") %>
 						
-						<input type="radio" name="mealNumber" value="1"> 1 
-						<input type="radio" name="mealNumber" value="2"> 2 
-						<input type="radio" name="mealNumber" value="3"> 3 
-						<input type="radio" name="mealNumber" value="4"> 4 											
-						<input type="radio" name="mealNumber" value="5"> 5 
-						<input type="radio" name="mealNumber" value="6"> 6 
-						<input type="radio" name="mealNumber" value="7"> 7
-						<br><br><br>
+						<br><br>
+				  
+						<h3>Time to fill the Pantry</h3><br>
 						
-						<%= link_to "Get My Meals", main_path, :class => "nice large radius blue button" %>
-						<br><br><br>
+						<!-- LIST OF SHOPPING CART ITEMS -->
+
+						<form align="left" font-size="18px">
+						<input type="checkbox" name="vehicle" value="Bike" /> I have a bike<br />
+						<input type="checkbox" name="vehicle" value="Car" /> I have a car 
+						</form>
+						</div>
 						
-						 						
+						
+						
+						
 					</div>					
 				</div>
-				
-			</div>>
 			
-		</div>>
+		</div>
 
 
-	<!-- Included JS Files -->
-	<script src="javascripts/foundation.js"></script>
-	<script src="javascripts/app.js"></script>
 	
 </body>
 </html>

@@ -53,15 +53,11 @@
 					<div class="panel" align=center>
 
 						<!-- NAVIGATION PANEL -->
-						<a href="dashboard.html">
-							<%= image_tag "foundation/custom_images/RecipeActiveButton.png", :alt => "Recipes"%>
-						 </a>
-						<a href="shoppingList.html">
-							<%= image_tag "foundation/custom_images/ShoppingInactiveButton.png", :alt => "Recipes"%>
-						 </a>
-						 <a href="healthStats.html">
-							<%= image_tag "foundation/custom_images/StatsInactiveButton.png", :alt => "Recipes"%>
-						 </a>
+						<%= link_to(image_tag("foundation/custom_images/RecipeActiveButton.png", :alt => "Recipes"), :action => "recipe") %>
+						
+						<%= link_to(image_tag("foundation/custom_images/ShoppingInactiveButton.png", :alt => "Shopping"), :action => "shopping" ) %>
+						
+						<%= link_to(image_tag("foundation/custom_images/StatsInactiveButton.png", :alt => "Stats"), :action => "stats") %>
 						
 						<br><br>
 				
