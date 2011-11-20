@@ -15,24 +15,25 @@
   
 	<!-- Included CSS Files -->
 	<%= stylesheet_link_tag 'foundation.css', :media => 'screen' %>
-	<%= stylesheet_link_tag 'app.css', :media => 'screen' %>	
+	<%= stylesheet_link_tag 'app.css', :media => 'screen' %>
+	
 
 	<!--[if lt IE 9]>
-	    <%= stylesheet_link_tag 'ie.css', :media => 'screen' %>
+		<%= stylesheet_link_tag 'ie.css', :media => 'screen' %>
 	<![endif]-->
 
 	
 	<!-- IE Fix for HTML5 Tags -->
 	<!--[if lt IE 9]>
-	    <%= javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js' %>
+		<%= javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js' %>
 	<![endif]-->
 
 </head>
 <body>
 	
 	<!-- Included JS Files -->
-	<%= javascript_include_tag 'foundation.js' %></script>
-	<%= javascript_include_tag 'app.js' %>></script>
+	<%= javascript_include_tag 'foundation.js' %>
+	<%= javascript_include_tag 'app.js' %>>
 
 		<!-- container -->
 		<div class="container">
@@ -41,7 +42,8 @@
 			<div class="row">
 				<div class="four columns">
 					<br>
-					<img src='stylesheets/custom_images/logo.png' alt="Weekly Eats">
+					<%= image_tag "foundation/custom_images/logo.png", :alt => "Weekly Eats"%>
+					<!--src='foundation/custom_images/logo.png' alt="Weekly Eats">-->
 					<br><br><br>
 				</div>
 			</div>
@@ -53,13 +55,16 @@
 
 						<!-- NAVIGATION PANEL -->
 						<a href="dashboard.html">
-							<img src="stylesheets/custom_images/RecipeActiveButton.png" alt="Recipes">
+							<%= image_tag "foundation/custom_images/RecipeActiveButton.png", :alt => "Recipes"%>
+							<!-- <img src="foundation/custom_images/RecipeActiveButton.png" alt="Recipes"> -->
 						 </a>
 						<a href="shoppingList.html">
-							<img src="stylesheets/custom_images/ShoppingInactiveButton.png" alt="Recipes">
+							<%= image_tag "foundation/custom_images/ShoppingInactiveButton.png", :alt => "Recipes"%>
+						<!--	<img src="foundation/custom_images/ShoppingInactiveButton.png" alt="Recipes"> -->
 						 </a>
 						 <a href="healthStats.html">
-							<img src="stylesheets/custom_images/StatsInactiveButton.png" alt="Recipes">
+							<%= image_tag "foundation/custom_images/StatsInactiveButton.png", :alt => "Recipes"%>
+							<!-- <img src="foundation/custom_images/StatsInactiveButton.png" alt="Recipes">-->
 						 </a>
 						
 						<br><br>
@@ -71,7 +76,7 @@
 
 						<div class="row white" align=center>
 							<div class="two columns">
-								<img src="images/foodPlaceholder.jpeg">
+								<%= image_tag "foundation/images/foodPlaceholder.jpeg" %>
 							</div>
 							
 							<div class="eight columns">
@@ -81,8 +86,8 @@
 							</div>
 
 							<div class="two columns">
-								<img src="images/check.png" width="30px" height="30px">
-								<img src="images/cross.png" width="30px" height="30px">
+								<%= image_tag "foundation/images/check.png", {:width => 30, :height => 30} %>
+								<%= image_tag "foundation/images/cross.png", {:width => 30, :height => 30} %>
 							</div>
 						</div>
 						
@@ -91,7 +96,7 @@
 						<div class="row white" align=center>
 							
 							<div class="two columns">
-								<img src="images/foodPlaceholder.jpeg">
+								<%= image_tag "foundation/images/foodPlaceholder.jpeg"%>
 							</div>
 							
 							<div class="eight columns">
@@ -99,8 +104,8 @@
 							</div>
 
 							<div class="two columns">
-								<img src="images/check.png" width="30px" height="30px">
-								<img src="images/cross.png" width="30px" height="30px">
+								<%= image_tag "foundation/images/check.png", {:width => 30, :height => 30} %>
+								<%= image_tag "foundation/images/cross.png", {:width => 30, :height => 30} %>
 							</div>
 						
 						</div>
@@ -110,7 +115,7 @@
 						<div class="row white" align=center>
 							
 							<div class="two columns">
-								<img src="images/foodPlaceholder.jpeg">
+								<%= image_tag "foundation/images/foodPlaceholder.jpeg" %>
 							</div>
 							
 							<div class="eight columns">
@@ -118,8 +123,8 @@
 							</div>
 
 							<div class="two columns">
-								<img src="images/check.png" width="30px" height="30px">
-								<img src="images/cross.png" width="30px" height="30px">
+								<%= image_tag "foundation/images/check.png", {:width => 30, :height => 30} %>
+								<%= image_tag "foundation/images/cross.png", {:width => 30, :height => 30} %>
 							</div>
 						
 						</div>

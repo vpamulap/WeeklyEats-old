@@ -1,7 +1,9 @@
 WeeklyEats::Application.routes.draw do
-  resources :ingredients
-
-  get "home/index"
+  match '/main',    :to => 'dashboard#main'
+  match '/stats',   :to => 'dashboard#stats'
+  match '/recipe',  :to => 'dashboard#recipe'
+  
+  #get "home/index"
 
   resources :meals
 
@@ -9,7 +11,8 @@ WeeklyEats::Application.routes.draw do
 
   resources :users
   
-  resources :dashboard
+  resources :ingredients
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -21,7 +24,7 @@ WeeklyEats::Application.routes.draw do
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
-  match 'dashboard/recipes' => 'dashboard#recipes', :as => :dashboard_recipes
+ # match 'dashboard/recipes' => 'dashboard#recipes', :as => :dashboard_recipes
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
@@ -60,7 +63,7 @@ WeeklyEats::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'home#index'
+  root :to => 'dashboard#index'
 
   # See how all your routes lay out with "rake routes"
 

@@ -28,49 +28,54 @@
 	<![endif]-->
 
 </head>
-<body>	
+<body>
 
 		<!-- container -->
 		<div class="container">
 
+			<!-- HEADER CODE -->
 			<div class="row">
-				<div class="eight columns centered">
-					<br><br><br>
+				<div class="four columns">
+					<br>
 					<img src='stylesheets/custom_images/logo.png' alt="Weekly Eats">
-					<br><br><br>
-					<img src='stylesheets/custom_images/tagline.png' alt="Tagline" >
-					<br><br><br><br><br>
-					
-
-			<!-- FACEBOOK CONNECT CODE -->		
-			<div id="fb-root"></div>
-		      <script>
-		        window.fbAsyncInit = function() {
-		          FB.init({
-		            appId      : '270750379638433',
-		            status     : true, 
-		            cookie     : true,
-		            xfbml      : true
-		          });
-		        };
-		        (function(d){
-		           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
-		           js = d.createElement('script'); js.id = id; js.async = true;
-		           js.src = "//connect.facebook.net/en_US/all.js";
-		           d.getElementsByTagName('head')[0].appendChild(js);
-		         }(document));
-		      </script>			
-		
-			  <div class="fb-login-button" data-perms="email,user_checkins">
-			        Login with Facebook
-			      </div>		
-				<a href=setup.html>
-					<img src='stylesheets/custom_images/facebookConnect.png' alt="Facebook Connect" align="right" >
-				</a>
-					
 					<br><br><br>
 				</div>
 			</div>
+
+			<!-- HOW MANY MEALS DO YOU WANT? -->		
+
+			<div class="row">
+				<div class="ten columns centered">
+					<div class="panel" align=center>
+
+						<!-- NAVIGATION PANEL -->
+						<a href="dashboard.html">
+							<img src="stylesheets/custom_images/RecipeInactiveButton.png" alt="Recipes">
+						 </a>
+						<a href="shoppingList.html">
+							<img src="stylesheets/custom_images/ShoppingInactiveButton.png" alt="Recipes">
+						 </a>
+						 <a href="healthStats.html">
+							<img src="stylesheets/custom_images/StatsActiveButton.png" alt="Recipes">
+						 </a>
+						
+						<br><br>
+					</div>	
+				</div>					
+			</div>
+					
+			<!-- PANEL DETAILS -->
+				<div class="row">
+					<div class="ten columns centered">
+						<div class="panel" align=center>
+
+							<h3>You are the master of the stir fry.</h3>
+
+						</div>	
+					</div>					
+				</div>
+			
+		</div>
 
 
 	<!-- Included JS Files -->
