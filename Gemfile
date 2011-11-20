@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.2'
+gem 'jquery-rails', '>= 1.0.12'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -20,8 +21,6 @@ group :assets do
   gem 'coffee-rails',  '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
 end
-
-gem 'jquery-rails'
 
 gem 'execjs'
 

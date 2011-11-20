@@ -52,82 +52,16 @@
 				<div class="ten columns centered">
 					<div class="panel" align=center>
 
-						<!-- NAVIGATION PANEL -->
-						<%= link_to(image_tag("foundation/custom_images/RecipeActiveButton.png", :alt => "Recipes"), :action => "recipe") %>
-						
-						<%= link_to(image_tag("foundation/custom_images/ShoppingInactiveButton.png", :alt => "Shopping"), :action => "shopping" ) %>
-						
-						<%= link_to(image_tag("foundation/custom_images/StatsInactiveButton.png", :alt => "Stats"), :action => "stats") %>
+						<%= render :partial=>'shared/nav_links' %>
 						
 						<br><br>
 				
 						<h1>Awesomeness.</h1>  
 						<h3>Now check out our suggestions, and then go shopping!</h3><br>
 						
-						<!-- NEW LINE -->
-
-						<div class="row white" align=center>
-							<div class="two columns">
-								<%= image_tag "foundation/images/foodPlaceholder.jpeg" %>
-							</div>
-							
-							<div class="eight columns">
-								
-									<a href="recipe.html"><h4 align="left">Recipe Title</h4></a>
-									<p align="left">Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. </p>
-							</div>
-
-							<div class="two columns">
-								<%= image_tag "foundation/images/check.png", {:width => 30, :height => 30} %>
-								<%= image_tag "foundation/images/cross.png", {:width => 30, :height => 30} %>
-							</div>
-						</div>
-						
-						<!-- NEW LINE -->
-						
-						<div class="row white" align=center>
-							
-							<div class="two columns">
-								<%= image_tag "foundation/images/foodPlaceholder.jpeg"%>
-							</div>
-							
-							<div class="eight columns">
-								<a href="recipe.html"><h4 align="left">Recipe Title</h4></a>								<p align="left">Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. </p>
-							</div>
-
-							<div class="two columns">
-								<%= image_tag "foundation/images/check.png", :width => 30, :height => 30 %>
-								<%= image_tag "foundation/images/cross.png", :width => 30, :height => 30 %>
-							</div>
-						
-						</div>
-						
-						<!-- NEW LINE -->
-						
-						<div class="row white" align=center>
-							
-							<div class="two columns">
-								<%= image_tag "foundation/images/foodPlaceholder.jpeg" %>
-							</div>
-							
-							<div class="eight columns">
-								<a href="recipe.html"><h4 align="left">Recipe Title</h4></a>								<p align="left">Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. </p>
-							</div>
-
-							<div class="two columns">
-								<%= image_tag "foundation/images/check.png", {:width => 30, :height => 30} %>
-								<%= image_tag "foundation/images/cross.png", {:width => 30, :height => 30} %>
-							</div>
-						
-						</div>
-						
-						
+            <%=  render @recipes %>
 					</div>					
 				</div>
-			
 		</div>
-
-
-	
 </body>
 </html>

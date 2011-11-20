@@ -3,8 +3,8 @@ class DashboardController < ApplicationController
   end
   
   def main
+    @recipes = Recipe.all
   end
-
   def stats
   end
 
