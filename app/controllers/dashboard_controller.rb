@@ -14,7 +14,7 @@ class DashboardController < ApplicationController
         recipe_ids << recipe.id
         recipe_conf << false
     end
-    session[:rid] = recipe_ids
+    session[:rids] = recipe_ids
     session[:rc] = recipe_conf
   end
 
@@ -38,8 +38,8 @@ class DashboardController < ApplicationController
     recipes = []
     rids.each { |rid| recipes << Recipe.find(rid) }
     
+    # Consolidate recipes and build a grocery list
     @groceries = consolidate(recipes)
-    
     
   end
   
@@ -58,21 +58,22 @@ class DashboardController < ApplicationController
     groceries = []
     names.each do |name|
         quantity = 0
-        recipes = []
+        rids = []
         
         recipes.each do |recipe|
             recipe.ingredients.each do |ingredient|
                 if ingredient.name == name
                     quantity += ingredient.quantity
-                    recipes << ingredient.recipe_id
+                    rids << ingredient.recipe_id
                 end
             end
         end
         
-        groceries << { 'quantity' => quantity, 'name' => name, 'recipes' => recipes.join(',') }
+        groceries << { :quantity => quantity, :name => name, :recipes => rids.join(',') }
     end
     
-    logger.info groceries
+    # Remove items with 0 quantity
+    groceries.delete_if { |g| g[:quantity] == 0 } 
     
     groceries
   end

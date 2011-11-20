@@ -14,7 +14,7 @@
 	<title>Weekly Eats</title>
   
 	<!-- Included CSS Files -->
-	<%= stylesheet_link_tag 'foundation.css', :media => 'screen' %>
+	<%= stylesheet_link_tag 'foundation', :media => 'screen' %>
 	<%= stylesheet_link_tag 'app.css', :media => 'screen' %>
 	
 
@@ -32,7 +32,7 @@
 <body>
 	
 	<!-- Included JS Files -->
-	<%= javascript_include_tag 'foundation.js' %>
+	<!-- <%= javascript_include_tag 'foundation.js' %> -->
 	<%= javascript_include_tag 'app.js' %>
 	
 		<!-- container -->
@@ -64,22 +64,33 @@
 						<h3>Time to fill the Pantry</h3><br>
 						
 						<!-- LIST OF SHOPPING CART ITEMS -->
-
-						<form align="left" font-size="18px">
-						<input type="checkbox" name="vehicle" value="Bike" /> I have a bike<br />
-						<input type="checkbox" name="vehicle" value="Car" /> I have a car 
-						</form>
-						</div>
 						
+						<form>
+						<table font-size="18px;">
+						    <tr>
+						    <!--
+						        <th>test</th>
+						        <th><h4>Quantity</h4></th>
+						        <th><h4>Ingredient</h4></th> -->
+						    </tr>
 						
-						
+						    <% @groceries.each do |grocery| %>
+						        <tr>
+						            <td><input type='checkbox' name="vehicle" value="bike" /></td>
+						            <td><%= grocery[:quantity] %></td>
+						            <td><%= grocery[:name] %></td>
+						        </tr>
+						    <%  end %>
+                        </table>
+                        </form>
+                        
+                        <%= link_to(image_tag("shopping/email.png", :alt => "Email") ) %>
+                        <%= link_to(image_tag("shopping/print.png", :alt => "Email") ) %>
+                        <%= link_to(image_tag("shopping/buyNow.png", :alt => "Email") ) %>
 						
 					</div>					
 				</div>
 			
-		</div>
-
-<%= debug @groceries %>
-	
+		</div>	
 </body>
 </html>
