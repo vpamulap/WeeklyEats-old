@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+	
+	<title>Weekly Eats</title>
+  
+	<!-- Included CSS Files -->
+	<%= stylesheet_link_tag 'foundation', :media => 'screen' %>
+	<%= stylesheet_link_tag 'app.css', :media => 'screen' %>
+	
+
+	<!--[if lt IE 9]>
+	<![endif]-->
+
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<%= javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js' %>
+	<![endif]-->
+
+</head>
+<body>
+<body>
+
+		<!-- container -->
+		<div class="container">
+
+			<!-- HEADER CODE -->
+			<div class="row">
+				<div class="four columns">
+					<br>
+					<img src='stylesheets/custom_images/logo.png' alt="Weekly Eats">
+					<br><br><br>
+				</div>
+				<div class="eight columns">
+					
+				</div>
+			</div>
+
+			
+			<!-- HOW MANY MEALS DO YOU WANT? -->		
+
+			<div class="row">
+				<div class="eight columns centered">
+					<div class="panel" align=center>
+						<h2>Weekly Eats is your personal cooking assistant.</h2>  
+						
+					<br>
+							<h5><strong>Heading to the grocery store?</strong> <br> Let us know how many meals you think you would like to cook this week, and leave the rest to us! </h5><br><br>
+						
+						<h4>How many meals do you want to plan?</h4> <br><br>
+						<%= form_tag("/main", :method => "post") do %>
+						<%= radio_button_tag(:mealnumber, "1") %> 
+						<%= label_tag(:mealnumber_1, "1") %>
+						<%= radio_button_tag(:mealnumber, "2")%>
+						<%= label_tag(:mealnumber_2, "2")%>
+						<%= radio_button_tag(:mealnumber, "3", :selected => "true")%>
+						<%= label_tag(:mealnumber_3, "3")%>
+						<%= radio_button_tag(:mealnumber, "4")%>
+						<%= label_tag(:mealnumber_4, "4") %>
+						<%= radio_button_tag(:mealnumber, "5")%>
+						<%= label_tag(:mealnumber_5, "5") %>
+						
+						
+						<br><br><br>
+						<%= submit_tag("Get My Meals", :class => "nice large radius blue button") %>
+						<% end %>
+						<br><br><br>
+						
+						 						
+					</div>					
+				</div>
+				
+			</div>>
+			
+		</div>>
+
+
+	<!-- Included JS Files -->
+	<script src="javascripts/foundation.js"></script>
+	<script src="javascripts/app.js"></script>
+	
+</body>
+</html>
