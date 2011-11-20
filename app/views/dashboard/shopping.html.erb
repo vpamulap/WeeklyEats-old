@@ -30,7 +30,11 @@
 
 </head>
 <body>
-
+	
+	<!-- Included JS Files -->
+	<%= javascript_include_tag 'foundation.js' %>
+	<%= javascript_include_tag 'app.js' %>
+	
 		<!-- container -->
 		<div class="container">
 
@@ -42,8 +46,7 @@
 					<br><br><br>
 				</div>
 			</div>
-
-			<!-- HOW MANY MEALS DO YOU WANT? -->		
+	
 
 			<div class="row">
 				<div class="ten columns centered">
@@ -52,32 +55,31 @@
 						<!-- NAVIGATION PANEL -->
 						<%= link_to(image_tag("foundation/custom_images/RecipeInactiveButton.png", :alt => "Recipes"), :action => "recipe") %>
 						
-						<%= link_to(image_tag("foundation/custom_images/ShoppingInactiveButton.png", :alt => "Shopping"), :action => "shopping") %>
+						<%= link_to(image_tag("foundation/custom_images/ShoppingActiveButton.png", :alt => "Shopping"), :action => "shopping") %>
 						
-						<%= link_to(image_tag("foundation/custom_images/StatsActiveButton.png", :alt => "Stats"), :action => "stats") %>
+						<%= link_to(image_tag("foundation/custom_images/StatsInactiveButton.png", :alt => "Stats"), :action => "stats") %>
 						
 						<br><br>
-					</div>	
-				</div>					
-			</div>
-					
-			<!-- PANEL DETAILS -->
-				<div class="row">
-					<div class="ten columns centered">
-						<div class="panel" align=center>
+				  
+						<h3>Time to fill the Pantry</h3><br>
+						
+						<!-- LIST OF SHOPPING CART ITEMS -->
 
-							<h3>You are the master of the stir fry.</h3>
-
-						</div>	
+						<form align="left" font-size="18px">
+						<input type="checkbox" name="vehicle" value="Bike" /> I have a bike<br />
+						<input type="checkbox" name="vehicle" value="Car" /> I have a car 
+						</form>
+						</div>
+						
+						
+						
+						
 					</div>					
 				</div>
 			
 		</div>
 
 
-	<!-- Included JS Files -->
-	<script src="javascripts/foundation.js"></script>
-	<script src="javascripts/app.js"></script>
 	
 </body>
 </html>

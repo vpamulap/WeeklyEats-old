@@ -1,8 +1,11 @@
 WeeklyEats::Application.routes.draw do
-  match '/main',    :to => 'dashboard#main'
-  match '/stats',   :to => 'dashboard#stats'
-  match '/recipe',  :to => 'dashboard#recipe'
-  match '/setup',   :to => 'dashboard#setup'
+
+  match '/main',        :to => 'dashboard#main'
+  match '/stats',       :to => 'dashboard#stats'
+  match '/recipes',     :to => 'dashboard#recipe'
+  match '/setup',       :to => 'dashboard#setup'
+  match '/shopping',    :to => 'dashboard#shopping'
+
   #get "home/index"
 
   #resources :meals
