@@ -3,7 +3,8 @@ class DashboardController < ApplicationController
   end
   
   def main
-    @nmeals = @params[:meal_number]  
+    nmeals = params[:mealnumber].to_i
+    @recipes = Recipe.all.sample(nmeals)
   end
 
   def stats
